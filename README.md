@@ -66,7 +66,8 @@ server {
   
 > Con lo anterior indicamos el puerto donde se levantan nuestros servidores, su IP, el puerto en el que escuchan las solicitudes, 80 para HTTP, y la localización donde deben enviarse las solicitudes (definido por la directiva proxy_pass, indicando que se envíe a backend_servers, definidos arriba).
 
-  Guardamos y dejamos de editar el archivo y reiniciamos el servicio nginx para que se aplique la configuración con el comando: `sudo systemctl restart nginx`. Si queremos comprobar que están funcionando los servidores, realizar: `curl http://localhost/` y se mostrará   un html de bienvenida. Recordar que localhost = 127.0.0.1.
+  Guardamos y dejamos de editar el archivo y reiniciamos el servicio nginx para que se aplique la configuración con el comando: `sudo systemctl restart nginx`. Si queremos comprobar que están funcionando los servidores, realizar: `curl http://localhost/` y se mostrará   un html de bienvenida.
+  
   Si realizamos varias veces dicho comando, se notará que hay cierta alternancia entre las respuestas de los 3 servidores, no siempre responde el mismo ya que estamos aplicando balanceo de carga. 
 
   ## Configurar HAProxy  como balanceador de carga
