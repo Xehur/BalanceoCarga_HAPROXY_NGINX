@@ -91,6 +91,14 @@ backend backend_servers
   ## Ejecución Pruebas
   En este apartado, haremos uso del Apanche Benchmark para realizar las pruebas y obtener los datos necesarios para comparar el balanceo de carga de ambos servicios. 
 
+  Para ello, ejecutamos el siguiente comando: `ab -n 10000 -c 400 http://localhost/`. El cual genera 10000 peticiones de las cuales 400 son concurrentes, y estas seran distribuidas entre los 3 servidores gracias al balanceador de carga y basándose en el algoritmo
+  de balanceo usado para determinar el orden. El comando es el mismo tanto para si se usa Nginx o HAProxy.
+
+  Los resultados de este comando para después usarlos para la comparativa se han guardado en su correspondiente carpeta dentro de [Carpeta Algoritmos](./AlgoritmosUsados) según el algoritmo que se haya empleado, dentro de un .txt.
+
+  **Es importante destacar que para algoritmo de balanceo, hay que hacer unos pequeños cambios en los archivos de configuración tanto para NGINX como para HAProxy, los usados en este archivo markdown representan las configuraciones para el algoritmo
+  RoundRobin. La correspondiente configuración se incluirá dentro de la carpeta del algoritmo que se use en cada caso.**
+
   
   
 
