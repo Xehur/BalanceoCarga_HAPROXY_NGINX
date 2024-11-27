@@ -15,7 +15,9 @@
 
   Antes de nada, realizar `sudo apt update && apt upgrade` para comprobar que todos los paquetes están actualizados.
   
-  Para instalar las herramientas basta con hacer: `sudo apt install -y nginx haproxy curl`. Para comprobar que se han instalado correctamente: `nginx -v`, `haproxy -v` y `curl --version`.
+  Para instalar las herramientas basta con hacer: `sudo apt install -y nginx haproxy curl`. 
+  
+  Para comprobar que se han instalado correctamente: `nginx -v`, `haproxy -v` y `curl --version`.
   
   También será necesario contar python3 para los servidores, ya que python permite crear servidores web simples de manera muy sencilla. Instalar python3: `sudo apt install python3` y comprobar instalación `python3 --version`.
   
@@ -23,7 +25,8 @@
 
 
 ## Creacion Servidores
- Haremos nuestras pruebas usando 3 servidores web de ejemplo para balancear la carga entre ellos. Para crear dichos servidores, basta con crearnos un directorio al que llamaremos backend y crear un script en python el cual lo haremos redirigiendo directamente con un echo la salida del comando al script. Copiamos el primero que hemos
+ Haremos nuestras pruebas usando 3 servidores web de ejemplo para balancear la carga entre ellos. Para crear dichos servidores, basta con crearnos un directorio al que llamaremos backend y crear un script en python el cual lo haremos redirigiendo directamente con un 
+ echo la salida del comando al script. Copiamos el primero que hemos
  creado que en nuestro caso es server1.py para crear más servidores.
  
 ```
