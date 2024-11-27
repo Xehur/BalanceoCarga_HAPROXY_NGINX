@@ -9,9 +9,9 @@
   balanceadores de carga, que es el objetivo de este trabajo.
 
 ## Requisitos
-  -Sistema Opertativo Ubuntu
-  -Permisos de superusuario `sudo` disponibles.
-  -Instalar las siguientes herramientas: `nginx`. `haproxy` y `curl` 
+  :Sistema Opertativo Ubuntu
+  :Permisos de superusuario `sudo` disponibles.
+  :Instalar las siguientes herramientas: `nginx`. `haproxy` y `curl` 
 
   Antes de nada, realizar `sudo apt update && apt upgrade` para comprobar que todos los paquetes están actualizados.
   
