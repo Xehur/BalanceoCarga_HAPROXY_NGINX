@@ -1,25 +1,25 @@
-# ALGORTIMOS EMPLEADOS : ROUNDROBIN, IP HASH, LEAST CONNECTIONS, WEIGHT Y HASH.
+# ALGORTIMOS EMPLEADOS 
 
 # RoundRobin (RR)
 
- Distribuye las solicitudes de forma secuencial y equitativa entre todos los servidores que se encuentren disponibles. Es simple de implementar y funciona bien cuando todos los servidores tienen mismas capacidades. Sin embargo, no tiene en cuenta la carga actual de los    servidores.
+ Distribuye las solicitudes de forma secuencial y equitativa entre todos los servidores que se encuentren disponibles. Es **simple^** de implementar y funciona bien cuando todos los servidores tienen mismas capacidades. **Sin embargo**, no tiene en cuenta la carga actual de los  servidores.
 
 # IP HASH
 
- Utiliza la dirección IP base del cliente para decidir a que servidor backend enviar la solicitud. Calcula un hash especifico para cada cliente y en base a ese hash numérico, se asignan las solicitudes a los servidores. Por ejemoplo hash 1 está asignada a servidor 1 -> 
- Ya sabe que si el hash es 1, enviar la solicitud a servidor 1.  
+ Utiliza la dirección IP base del cliente para decidir a que servidor backend enviar la solicitud. **Calcula un hash especifico para cada cliente** y en base a ese hash numérico, se asignan las solicitudes a los servidores. Por ejemplo hash 1 está asignada a servidor 1 -> Ya sabe que si el hash es 1, enviar la solicitud a servidor 1.  
  
- Como ventaja, garantiza que cada cliente siempre se le asignará el mismo servidor, lo cual es útil si las sesiones son persistentes. Como desventaja, si un servidor falla puede producir desequilibrio en la carga ya que el hash asignado a ese servidor no valdría, además   de que al igual que RR, no toma en cuenta la carga actual de los servidores. 
+ Como **ventaja**, garantiza que cada cliente siempre se le asignará el mismo servidor, lo cual es útil si las sesiones son persistentes. Como **desventaja**, si un servidor falla puede producir desequilibrio en la carga ya que el hash asignado a ese servidor no valdría, además   de que al igual que RR, no toma en cuenta la carga actual de los servidores. 
  
 # LEAST-CONNECTIONS
-  Su funcionamiento es simple, se basa enviar las solicitudes al servidor con menor cantidad de conexiones activas. Es dinámico y maneja bien la carga pero puede suponer un gran costo adicional en términos de cálculo si hay demasiados servidores. 
+  Su funcionamiento es **simple**, se basa enviar las solicitudes al servidor con **menor cantidad de conexiones activas**. Es dinámico y maneja bien la carga pero puede suponer un gran costo adicional en términos de cálculo si hay demasiados servidores. 
 
 # WEIGHT
-  Similar al RR, solo que ahora permite asignar pesos a los servidores. Contra más alto es el peso, significa que ese servidor es el que tiene mayor prioridad de recibir solicitudes, por lo que lo suyo es que el peso escale acorde a la potencia del servidor. Es simple y    permite aprovechar los recursos de los servidores pero no tiene en cuenta la carga dinámica en tiempo real.
+  Similar al RR, solo que ahora permite asignar pesos a los servidores. Contra más alto es el peso, significa que ese servidor es el que tiene mayor prioridad de recibir solicitudes, por lo que lo suyo es que el peso escale acorde a la potencia del servidor. Es simple 
+  y permite **aprovechar los recursos de los servidores** pero no tiene en cuenta la carga dinámica en tiempo real.
 
 # HASH (consistente)
-  Parecido a IP HASH solo que emplea una clave para calcular el hash en vez de la IP del usuario. Reduce el trabajo de reubicar las solicitudes si un servidor cambia de localización y al ser consistente, supone una mejora sobre el hash normal. Sin embargo, supone       
-  bastante trabajo el hecho de eliminar varios servidores y recalcular sus hash redirigiendo a su vez las solicitudes a otros servidores.
+  Parecido a IP HASH solo que emplea una **clave para calcular el hash en vez de la IP del usuario**. Reduce el trabajo de reubicar las solicitudes si un servidor cambia de localización y al ser consistente, supone una **mejora sobre el hash normal**. Sin  
+  embargo,suponebastante trabajo el hecho de eliminar varios servidores y recalcular sus hash redirigiendo a su vez las solicitudes a otros servidores.
 
 
 | **Algoritmo**          | **Descripción**                                                                                     | **Ventajas**                                                                                   | **Desventajas**                                                                                   | **Casos de Uso Comunes**                                               |
