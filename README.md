@@ -45,7 +45,7 @@ cp server1.py server2.py server3.py`
   Primero, podemos comprobar el estado del servicio NGINX con el comando `sudo systemctl status nginx` 
   
   Después, navegamos a la ruta donde se encuentra el archivo de configuración para balancear carga de nginx, esto lo hacemos con el comando `sudo nano /etc/nginx/conf.d/loadbalancer.conf`. Se ha usado nano como editor de texto pero se podría usar el que se prefiera. 
-  A continuación, agregamos este bloque al archivo de configuraciíon que estamos editando:
+  A continuación, agregamos este bloque al archivo de configuración que estamos editando:
   
 ```
 upstream backend_servers {
@@ -70,7 +70,8 @@ server {
   Si realizamos varias veces dicho comando, se notará que hay cierta alternancia entre las respuestas de los 3 servidores, no siempre responde el mismo ya que estamos aplicando balanceo de carga. 
 
   ## Configurar HAProxy  como balanceador de carga
-   Primero, podemos comprobar el estado del servicio HAProxy con el comando  `sudo systemctl status haproxy`. Para editar la configuración del balanceo de carga, accedemos y editamos el archivo haproxy.cfg con el comando `sudo nano /etc/haproxy/haproxy.cfg` 
+   Primero, podemos comprobar el estado del servicio HAProxy con el comando  `sudo systemctl status haproxy`. Para editar la configuración del balanceo de carga, accedemos y editamos el archivo haproxy.cfg con el comando `sudo nano /etc/haproxy/haproxy.cfg` Es 
+   importante que el siguiente bloque de código se añada al final del archivo de configuración. 
 
    ```
 frontend http_front
