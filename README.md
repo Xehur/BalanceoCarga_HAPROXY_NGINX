@@ -96,7 +96,7 @@ backend backend_servers
 
   Los resultados de este comando para después usarlos para la comparativa se han guardado en su correspondiente carpeta dentro de [Carpeta Algoritmos](./AlgoritmosUsados) según el algoritmo que se haya empleado, dentro de un .txt.
 
-  **Es importante destacar que para algoritmo de balanceo, hay que hacer unos pequeños cambios en los archivos de configuración tanto para NGINX como para HAProxy, los usados en este archivo markdown representan las configuraciones para el algoritmo
+  **Es importante destacar que para cada  algoritmo de balanceo, hay que hacer unos pequeños cambios en los archivos de configuración tanto para NGINX como para HAProxy, los usados en este archivo markdown representan las configuraciones para el algoritmo
   RoundRobin. La correspondiente configuración se incluirá dentro de la carpeta del algoritmo que se use en cada caso.**
 
   
