@@ -2,7 +2,7 @@
 
 # RoundRobin (RR)
 
- Distribuye las solicitudes de forma secuencial y equitativa entre todos los servidores que se encuentren disponibles. Es **simple^** de implementar y funciona bien cuando todos los servidores tienen mismas capacidades. **Sin embargo**, no tiene en cuenta la carga actual de los  servidores.
+ Distribuye las solicitudes de forma secuencial y equitativa entre todos los servidores que se encuentren disponibles. Es **simple** de implementar y funciona bien cuando todos los servidores tienen mismas capacidades. **Sin embargo**, no tiene en cuenta la carga actual de los  servidores.
 
 # IP HASH
 
@@ -18,8 +18,8 @@
   y permite **aprovechar los recursos de los servidores** pero no tiene en cuenta la carga dinámica en tiempo real.
 
 # HASH (consistente)
-  Parecido a IP HASH solo que emplea una **clave para calcular el hash en vez de la IP del usuario**. Reduce el trabajo de reubicar las solicitudes si un servidor cambia de localización y al ser consistente, supone una **mejora sobre el hash normal**. Sin  
-  embargo,suponebastante trabajo el hecho de eliminar varios servidores y recalcular sus hash redirigiendo a su vez las solicitudes a otros servidores.
+  Parecido a IP HASH solo que emplea una **clave para calcular el hash en vez de la IP del usuario**. Reduce el trabajo de reubicar las solicitudes si un servidor cambia de localización y al ser consistente, supone una **mejora sobre el hash normal**. 
+  Sin embargo,suponebastante trabajo el hecho de eliminar varios servidores y recalcular sus hash redirigiendo a su vez las solicitudes a otros servidores.
 
 
 | **Algoritmo**          | **Descripción**                                                                                     | **Ventajas**                                                                                   | **Desventajas**                                                                                   | **Casos de Uso Comunes**                                               |
