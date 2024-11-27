@@ -99,6 +99,12 @@ backend backend_servers
   **Es importante destacar que para cada  algoritmo de balanceo, hay que hacer unos pequeños cambios en los archivos de configuración tanto para NGINX como para HAProxy, los usados en este archivo markdown representan las configuraciones para el algoritmo
   RoundRobin. La correspondiente configuración se incluirá dentro de la carpeta del algoritmo que se use en cada caso.**
 
+
+  ## Comparativa Balanceo de Carga
+
+  Esta gráfica muestra la compartiva entre NGINX y HAProxy en el balanceo de carga. En general, HAProxy consigue mejores resultados que NGINX salvo en algunos algoritmos en los que ambos estan bastante parejos. 
+
+  ![Gráfica Comparativa](./Comparativa_Carga.png)
   
   
 
